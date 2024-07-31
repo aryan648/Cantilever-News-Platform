@@ -11,7 +11,7 @@ async function fetchRandomNews()
   {
     const apiURL = `https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=20&apikey=${apiKey}`;
     const response = await fetch(apiURL);
-    const data = await response.json(); //convert this JSON data into a JavaScript object, Ease of Use, code doesn't block while waiting for the response to be processed
+    const data = await response.json(); 
     return data.articles;
   }
   catch(error)
@@ -63,7 +63,7 @@ async function fetchNewsQuery(query)
   {
     const apiURL =` https://newsapi.org/v2/everything?q=${query}&pageSize=100&apikey=${apiKey}`;
     const response = await fetch(apiURL);
-    const data = await response.json(); //convert this JSON data into a JavaScript object, Ease of Use, code doesn't block while waiting for the response to be processed
+    const data = await response.json();
     return data.articles;
   }
   catch(error)
